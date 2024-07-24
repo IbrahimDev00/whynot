@@ -1,36 +1,35 @@
 // layout.tsx
-import type { Metadata } from "next";
-import "./globals.css"; 
-
-export const metadata: Metadata = {
-  title: "Personal portfolio website",
-  description: "Personal portfolio website for ibrahim chikani",
-};
+'use client'
+import React, { useState, useEffect } from 'react';
+import LoadingPage from '@/app/component/LoadingPage';
+import './globals.css';
+import Head from './head'; // Import the head component
 
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    // Simulate a loading delay
+    const timer = setTimeout(() => setLoading(false), 50000); // Adjust the duration as needed
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  const handleLoadingComplete = () => {
+    setLoading(false); // This will hide the loading page
+  };
+
   return (
     <html lang="en">
       <head>
-        <link
-          rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
-        />
-        <link 
-          rel="stylesheet" 
-          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" 
-        />
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+        <Head /> {/* Render the head component */}
       </head>
       <body style={{ fontFamily: "'Open Sans', sans-serif" }}>
-        {children}
+        {loading ? <LoadingPage onComplete={handleLoadingComplete} /> : children}
       </body>
     </html>
   );
