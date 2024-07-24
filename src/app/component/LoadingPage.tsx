@@ -43,7 +43,7 @@ const LoadingPage = ({ onComplete }: { onComplete: () => void }) => {
 
   return (
     <div className="fixed inset-0 bg-black flex items-center justify-center">
-      <h1 id="myText" className="text-white text-4xl font-bold">Loading</h1>
+      <h1 id="myText" className="text-white text-4xl font-bold animate-pulse">Ibrahim</h1>
     </div>
   );
 };
