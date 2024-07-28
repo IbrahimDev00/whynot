@@ -207,7 +207,7 @@ export default function Home() {
         {/* Grid Section */}
         <div className="grid grid-cols-2 gap-4 mt-5">
         <div ref={pbox1} className='h-[460px] rounded-xl bg-slate-200 border-solid border-slate-300 border-2 overflow-hidden flex flex-col items-center'>
-          <h2 className='text-gray-700 font-bold text-2xl text-center'>GITAM AeroAstro Club</h2>
+          <h2 className='text-gray-700 font-bold text-xl text-center mb-2'>GITAM AeroAstro Club</h2>
           <Image 
             src = "/gaac_project.png"
             width={620}
@@ -215,15 +215,15 @@ export default function Home() {
             alt = "gaac_project_img"
             className="object-contain"
           />
-          <p className='text-green-950 p-3 font-medium text-lg text-left'>This website is in its final stages of completion. Built for a tech club, it promises to be modern, easy to use, and feature rich.<br></br>
+          <p className='text-green-950 p-3 font-medium text-base text-left'>This website is in its final stages of completion. Built for a tech club, it promises to be modern, easy to use, and feature rich.<br></br>
           Stay tuned to see the final results! 😉
           </p>
-          <div className='flex items-center justify-center align-bottom mt-2'>
+          <div className='flex items-center justify-center align-bottom mt-3'>
             <button className='bg-blue-500 p-3 rounded-lg text-xl text-white w-36 hover:bg-gradient-to-r hover:from-[#1F1C2C] hover:to-[#928DAB]'><Link href={"https://github.com/g-aeroastro-c/gaac-page-f"}>Github</Link></button>
           </div>
         </div>
         <div ref={pbox2} className='h-[460px] rounded-xl bg-slate-200 border-solid border-slate-300 border-2'>
-          <h2 className='text-gray-700 font-bold text-2xl text-center'>Noble Nest- Real Estate solutions</h2>
+          <h2 className='text-gray-700 font-bold text-xl text-center mb-1'>Noble Nest- Real Estate solutions</h2>
           <div className='flex justify-center'>
             <Image 
               src='/noble_nest.png'
@@ -244,7 +244,7 @@ export default function Home() {
           </div>
         </div>
           <div ref={pbox3} className='h-[460px] rounded-xl bg-slate-200 border-solid border-slate-300 border-2'>
-            <h2 className='text-gray-600 font-bold text-2xl text-center'>URL shortner</h2>
+            <h2 className='text-gray-600 font-bold text-xl text-center mb-2'>URL shortner</h2>
             <div className='flex justify-center'>
               <Image 
                 src= '/url_short.png'
@@ -255,19 +255,19 @@ export default function Home() {
               />
             </div>
             
-            <p className='text-green-950 p-3 font-medium text-lg text-left'>A powerful URL shortner built in GoLang, shorten your long URL's in seconds, get customized URL's for free! Btw..its still a work in progress, so stay tuned😉</p>
+            <p className='text-green-950 p-3 font-medium text-base text-left'>A powerful URL shortner built in GoLang, shorten your long URL's in seconds, get customized URL's for free! Btw..its still a work in progress, so stay tuned😉</p>
             <div className='flex items-center justify-center align-bottom mt-1'>
               <button className='bg-blue-500 p-3 rounded-lg text-xl text-white w-36 hover:bg-gradient-to-r hover:from-[#1F1C2C] hover:to-[#928DAB]'><Link href={"https://github.com/IbrahimDev00/url_shortner"}>Github</Link></button>
             </div>
           </div>
           <div ref={pbox4} className='h-[460px] rounded-xl bg-slate-200 border-solid border-slate-300 border-2'>
-            <h2 className='text-gray-600 font-bold text-2xl text-center'>Password manager</h2>
+            <h2 className='text-gray-600 font-bold text-xl text-center mb-2'>Password manager</h2>
             <div className='flex justify-center'>
               <iframe width="560" height="285" src="https://www.youtube.com/embed/X5cqzM0_hfc?si=XdXXcMyipWCk2suR" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
             </div>
-            <p className='text-green-950 p-3 font-medium text-lg text-left'>My first project, built in python, has everything you need to keep your passwords safe😌</p>
+            <p className='text-green-950 p-5 font-medium text-base text-left'>My first project, built in python, has everything you need to keep your passwords safe😌</p>
             <div className='flex items-center justify-center align-bottom'>
-              <button className='bg-blue-500 p-3 rounded-lg text-xl text-white w-36 hover:bg-gradient-to-r hover:from-[#1F1C2C] hover:to-[#928DAB]'>
+              <button className='bg-blue-500 p-3 rounded-lg text-xl text-white mt-2 w-36 hover:bg-gradient-to-r hover:from-[#1F1C2C] hover:to-[#928DAB]'>
                 <Link href={"https://youtu.be/X5cqzM0_hfc?si=HJVUja5P6QEa9F5o"}>Youtube</Link>
               </button>
             </div>
