@@ -3,6 +3,7 @@ import { useRef, useEffect } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Link from 'next/link';
+import Image from 'next/image';
 
 
 gsap.registerPlugin(ScrollTrigger);
@@ -203,26 +204,61 @@ export default function Home() {
         
         {/* Grid Section */}
         <div className="grid grid-cols-2 gap-4 mt-5">
-          <div ref={pbox1} className='h-[160px] rounded-xl bg-slate-200 border-solid border-slate-300 border-2 overflow-hidden'>
-            <h2 className='text-gray-600 font-bold text-2xl text-center'>GITAM AeroAstro Club</h2>
+        <div ref={pbox1} className='h-[460px] rounded-xl bg-slate-200 border-solid border-slate-300 border-2 overflow-hidden flex flex-col items-center'>
+          <h2 className='text-gray-700 font-bold text-2xl text-center'>GITAM AeroAstro Club</h2>
+          <Image 
+            src = "/gaac_project.png"
+            width={620}
+            height={520}
+            alt = "gaac_project_img"
+            className="object-contain"
+          />
+          <p className='text-green-950 p-3 font-medium text-lg text-left'>This website is in its final stages of completion. Built for a tech club, it promises to be modern, easy to use, and feature rich.<br></br>
+          Stay tuned to see the final results! 😉
+          </p>
+          <div className='flex items-center justify-center align-bottom mt-2'>
+            <button className='bg-blue-500 p-3 rounded-lg text-xl text-white w-36'><Link href={"https://github.com/g-aeroastro-c/gaac-page-f"}>Github</Link></button>
+          </div>
+        </div>
+          <div ref={pbox2} className='h-[460px] rounded-xl bg-slate-200 border-solid border-slate-300 border-2'>
+            <h2 className='text-gray-700 font-bold text-2xl text-center'>Noble Nest- Real Estate solutions</h2>
+            {/* <Image 
+              src= ''
+              width = {620}
+              height={520}
+              alt = "noble_nest_project"
+              className="object-contain"
+            /> */}
+            <p className='text-green-950 p-3 font-medium text-lg text-left'>A creative idea presented in IIT-Kanpur's hackathon, an idea to render property images in 3-d,
+            solving the problem of physical presence to view and buy poperty.</p>
             <div className='flex items-center justify-center align-bottom mt-12'>
-              <button className='bg-blue-500 p-4 rounded-lg text-xl text-white w-32'><Link href={"https://github.com/g-aeroastro-c/gaac-page-f"}>Github</Link></button>
+              <button className='bg-blue-500 p-3 rounded-lg text-xl text-white w-32'><Link href={"https://github.com/Nomadic-Nex/noble-nest"}>Github</Link></button>
             </div>
           </div>
-          <div ref={pbox2} className='h-[160px] rounded-xl bg-slate-200 border-solid border-slate-300 border-2'>
-            <h2 className='text-gray-600 font-bold text-2xl text-center'>Real Estate</h2>
-            <div className='flex items-center justify-center align-bottom mt-12'>
-              <button className='bg-blue-500 p-4 rounded-lg text-xl text-white w-32'><Link href={"https://github.com/g-aeroastro-c/gaac-page-f"}>Github</Link></button>
-            </div>
-          </div>
-          <div ref={pbox3} className='h-[160px] rounded-xl bg-slate-200 border-solid border-slate-300 border-2'>
+          <div ref={pbox3} className='h-[460px] rounded-xl bg-slate-200 border-solid border-slate-300 border-2'>
             <h2 className='text-gray-600 font-bold text-2xl text-center'>URL shortner</h2>
+            {/* <Image 
+              src= ''
+              width = {620}
+              height={520}
+              alt = "noble_nest_project"
+              className="object-contain"
+            /> */}
+            <p className='text-green-950 p-3 font-medium text-lg text-left'>A powerful URL shortner built in GoLang, shorten your long URL's in seconds, get customized URL's for free!</p>
             <div className='flex items-center justify-center align-bottom mt-12'>
               <button className='bg-blue-500 p-4 rounded-lg text-xl text-white w-32'><Link href={"https://github.com/g-aeroastro-c/gaac-page-f"}>Github</Link></button>
             </div>
           </div>
-          <div ref={pbox4} className='h-[160px] rounded-xl bg-slate-200 border-solid border-slate-300 border-2'>
+          <div ref={pbox4} className='h-[460px] rounded-xl bg-slate-200 border-solid border-slate-300 border-2'>
             <h2 className='text-gray-600 font-bold text-2xl text-center'>Password manager</h2>
+              {/* <Image 
+              src= ''
+              width = {620}
+              height={520}
+              alt = "noble_nest_project"
+              className="object-contain"
+            /> */}
+            <p className='text-green-950 p-3 font-medium text-lg text-left'>My first project, built in python, has everything you need to keep your passwords safe😌</p>
             <div className='flex items-center justify-center align-bottom mt-12'>
               <button className='bg-blue-500 p-4 rounded-lg text-xl text-white w-32'><Link href={"https://github.com/g-aeroastro-c/gaac-page-f"}>Github</Link></button>
             </div>

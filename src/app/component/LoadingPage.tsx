@@ -15,35 +15,38 @@ const LoadingPage = ({ onComplete }: { onComplete: () => void }) => {
 
     // Build the animation sequence
     words.forEach((word, index) => {
-      tl.to("#myText", {
-        duration: 1,
-        text: word,
-        delay: index === 0 ? 0.5 : 1, // Adjust initial delay and between words
-        ease: "power1.inOut"
-      }).to("#myText", {
+      tl.to(`#myText-${index}`, {
+        duration: 0.5,
+        opacity: 1,
+        delay: index === 0 ? 0.3 : 0.3, // Adjust initial delay and between words
+        ease: "power1.inOut",
+      }).to(`#myText-${index}`, {
         duration: 1,
         opacity: 0,
-        ease: "power1.inOut"
-      }, `+=${index === 0 ? 2 : 1}`) // Adjust delay between words
-      .to("#myText", {
-        duration: 0,
-        opacity: 1 // Reset opacity for next word
-      });
+        ease: "power1.inOut",
+      }, `+=${index === 0 ? 0.3 : 0.3}`); // Adjust delay between words
     });
 
     // Ensure final fade out and trigger onComplete
-    tl.to("#myText", { duration: 1, opacity: 0, delay: 1 })
+    tl.to("#myText-0", { duration: 0.2, opacity: 0, delay: 0.2 })
       .eventCallback("onComplete", onComplete);
 
     // Cleanup on unmount
     return () => {
-      gsap.killTweensOf("#myText");
+      gsap.killTweensOf("#myText-0, #myText-1, #myText-2, #myText-3"); // Target all elements
     };
   }, [onComplete]);
 
+  // Words to display
+  const words = ['Student', 'Developer', 'Teacher', 'President'];
+
   return (
     <div className="fixed inset-0 bg-black flex items-center justify-center">
-      <h1 id="myText" className="text-white text-4xl font-bold animate-pulse">Ibrahim</h1>
+      {words.map((word, index) => (
+        <span key={word} id={`myText-${index}`} className="text-white text-4xl font-bold absolute" style={{ opacity: 0 }}>
+          {word}
+        </span>
+      ))}
     </div>
   );
 };
