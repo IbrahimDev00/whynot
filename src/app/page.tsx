@@ -245,16 +245,19 @@ export default function Home() {
         </div>
           <div ref={pbox3} className='h-[460px] rounded-xl bg-slate-200 border-solid border-slate-300 border-2'>
             <h2 className='text-gray-600 font-bold text-2xl text-center'>URL shortner</h2>
-            {/* <Image 
-              src= ''
-              width = {620}
-              height={520}
-              alt = "noble_nest_project"
-              className="object-contain"
-            /> */}
-            <p className='text-green-950 p-3 font-medium text-lg text-left'>A powerful URL shortner built in GoLang, shorten your long URL's in seconds, get customized URL's for free!</p>
-            <div className='flex items-center justify-center align-bottom mt-12'>
-              <button className='bg-blue-500 p-3 rounded-lg text-xl text-white w-36 hover:bg-gradient-to-r hover:from-[#1F1C2C] hover:to-[#928DAB]'><Link href={"https://github.com/g-aeroastro-c/gaac-page-f"}>Github</Link></button>
+            <div className='flex justify-center'>
+              <Image 
+                src= '/url_short.png'
+                width = {620}
+                height={520}
+                alt = "url_short_project"
+                className="object-contain"
+              />
+            </div>
+            
+            <p className='text-green-950 p-3 font-medium text-lg text-left'>A powerful URL shortner built in GoLang, shorten your long URL's in seconds, get customized URL's for free! Btw..its still a work in progress, so stay tuned😉</p>
+            <div className='flex items-center justify-center align-bottom mt-1'>
+              <button className='bg-blue-500 p-3 rounded-lg text-xl text-white w-36 hover:bg-gradient-to-r hover:from-[#1F1C2C] hover:to-[#928DAB]'><Link href={"https://github.com/IbrahimDev00/url_shortner"}>Github</Link></button>
             </div>
           </div>
           <div ref={pbox4} className='h-[460px] rounded-xl bg-slate-200 border-solid border-slate-300 border-2'>
@@ -288,7 +291,7 @@ export default function Home() {
           </div>
           
           <h5 className='text-black  text-left mb-4 font-semibold text-xl bg-clip-text text-transparent bg-gradient-to-r from-[#9D50BB]  to-[#6E48AA]'>I learn, absorb and implement.</h5>
-          <p className='text-black  text-left mb-4 font-normal text-base'>I'm a student at GITAM University doing my Bachelor's in Computer Science. With a GPA of 9.03 i strive to strike a blance between course work and practical knowledge....well...so far so good😉<br></br>
+          <p className='text-black  text-left mb-4 font-normal text-lg'>I'm a student at GITAM University doing my Bachelor's in Computer Science. With a GPA of 9.03 i strive to strike a balance between course work and practical knowledge....well...so far so good😉<br></br>
           I'm driven by a passion for knowledge and acknowledge that there's always something to learn from someone, and i welcome each drop of knowledge into my mind, like a man in a desert ☀️.<br></br>
           <br></br>
           With my current focus being on Machine learning and its applications, i yearn to make something that benifits the society....ooh fun fact: I teach school children in my free time 👨‍🏫<br></br>
