@@ -18,7 +18,7 @@ export default function RootLayout({
 
   useEffect(() => {
     // Simulate a loading delay
-    const timer = setTimeout(() => setLoading(false), 7500); // Adjust the duration as needed
+    const timer = setTimeout(() => setLoading(false), 7500); 
 
     return () => clearTimeout(timer);
   }, []);

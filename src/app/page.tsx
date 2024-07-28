@@ -112,19 +112,19 @@ export default function Home() {
     );
 
     gsap.fromTo(
-      about.current,
-      {opacity: 0},
-      {
-        opacity: 1,
-        duration: 3,
-        ease: "elastic.out(1, 0.3)",
+      pheading.current,
+      { opacity: 0 },
+      { 
+        opacity: 1, 
+        duration: 3, 
+        ease: "slow(0.5, 0.8, true)",
         scrollTrigger: {
           trigger: pheading.current,
-          start: "top 80%",
+          start: "top 80%",  // Adjust this value as needed
           toggleActions: "play play pause resume reset"
         }
       }
-    )
+    );
     
   }, []);
 
@@ -135,24 +135,25 @@ export default function Home() {
         {/* Navbar */}
         <nav className="flex justify-between items-start space-x-8 justify-items-center">
           <Link href="#home">
-            <h1 className="text-black font-semibold sm:text-xl md:text-2xl lg:text-2xl cursor-pointer">
+            <h1 className="text-black font-semibold sm:text-xl md:text-2xl lg:text-2xl cursor-pointer flex items-center space-x- hover:text-blue-500 ">
               <span className="material-symbols-outlined">home</span>
-              Home
+              <span>Home</span>
             </h1>
           </Link>
           <Link href="#projects">
-            <h1 className="text-black font-semibold sm:text-xl md:text-2xl lg:text-2xl cursor-pointer">
+            <h1 className="text-black font-semibold sm:text-xl md:text-2xl lg:text-2xl cursor-pointer flex items-center space-x- hover:text-blue-500">
               <span className="material-symbols-outlined">view_timeline</span>
-              Projects
+              <span>Projects</span>
             </h1>
           </Link>
           <Link href="#about">
-            <h1 className="text-black font-semibold sm:text-xl md:text-2xl lg:text-2xl cursor-pointer">
+            <h1 className="text-black font-semibold sm:text-xl md:text-2xl lg:text-2xl cursor-pointer flex items-center space-x- hover:text-blue-500">
               <span className="material-symbols-outlined">sentiment_satisfied</span>
-              About me
+              <span>About me</span>
             </h1>
           </Link>
         </nav>
+
         {/* Download Button */}
         <button type="button" onClick={() => {
           const link = document.createElement("a");
@@ -160,7 +161,7 @@ export default function Home() {
           link.target = "_blank";
           link.download = "Ibrahim_Resume.pdf";
           link.click();
-        }} className="bg-indigo-900 text-white p-4 rounded-md">
+        }} className="bg-indigo-900 text-white p-4 rounded-md hover:bg-gradient-to-r hover:from-[#485563] hover:to-[#29323c] hover:drop-shadow-xl">
           Download Resume
         </button>
 
@@ -189,11 +190,12 @@ export default function Home() {
       </div>
       {/* Learn More Button */}
       <div className="flex justify-center p-8 mt-20">
-        <button className="bg-indigo-900 text-white p-4 rounded-md">
+        <button className="bg-indigo-900 text-white p-4 rounded-md flex items-center space-x-2 hover:drop-shadow-2xl">
           <Link href="#projects">Learn More</Link>
           <span className="material-symbols-outlined animate-bounce">keyboard_double_arrow_down</span>
         </button>
       </div>
+
       <hr></hr>
       {/* Projects */}
       <div id='projects' className="p-10 mt-12 ">
@@ -217,24 +219,30 @@ export default function Home() {
           Stay tuned to see the final results! 😉
           </p>
           <div className='flex items-center justify-center align-bottom mt-2'>
-            <button className='bg-blue-500 p-3 rounded-lg text-xl text-white w-36'><Link href={"https://github.com/g-aeroastro-c/gaac-page-f"}>Github</Link></button>
+            <button className='bg-blue-500 p-3 rounded-lg text-xl text-white w-36 hover:bg-gradient-to-r hover:from-[#1F1C2C] hover:to-[#928DAB]'><Link href={"https://github.com/g-aeroastro-c/gaac-page-f"}>Github</Link></button>
           </div>
         </div>
-          <div ref={pbox2} className='h-[460px] rounded-xl bg-slate-200 border-solid border-slate-300 border-2'>
-            <h2 className='text-gray-700 font-bold text-2xl text-center'>Noble Nest- Real Estate solutions</h2>
-            {/* <Image 
-              src= ''
-              width = {620}
-              height={520}
-              alt = "noble_nest_project"
+        <div ref={pbox2} className='h-[460px] rounded-xl bg-slate-200 border-solid border-slate-300 border-2'>
+          <h2 className='text-gray-700 font-bold text-2xl text-center'>Noble Nest- Real Estate solutions</h2>
+          <div className='flex justify-center'>
+            <Image 
+              src='/noble_nest.png'
+              width={620}
+              height={220}
+              alt='noble_nest_project'
               className="object-contain"
-            /> */}
-            <p className='text-green-950 p-3 font-medium text-lg text-left'>A creative idea presented in IIT-Kanpur's hackathon, an idea to render property images in 3-d,
-            solving the problem of physical presence to view and buy poperty.</p>
-            <div className='flex items-center justify-center align-bottom mt-12'>
-              <button className='bg-blue-500 p-3 rounded-lg text-xl text-white w-32'><Link href={"https://github.com/Nomadic-Nex/noble-nest"}>Github</Link></button>
-            </div>
+            />
           </div>
+          <p className='text-green-950 p-1 font-medium text-base text-left'>
+            A creative idea presented in IIT-Kanpur's hackathon, an idea to render property images in 3-d,
+            solving the problem of physical presence to view and buy property. Shh...but the properties in this site are on Mars.
+          </p>
+          <div className='flex items-center justify-center align-bottom'>
+            <button className='bg-blue-500 p-3 rounded-lg text-xl text-white w-36 hover:bg-gradient-to-r hover:from-[#1F1C2C] hover:to-[#928DAB]'>
+              <Link href={"https://github.com/Nomadic-Nex/noble-nest"}>Github</Link>
+            </button>
+          </div>
+        </div>
           <div ref={pbox3} className='h-[460px] rounded-xl bg-slate-200 border-solid border-slate-300 border-2'>
             <h2 className='text-gray-600 font-bold text-2xl text-center'>URL shortner</h2>
             {/* <Image 
@@ -246,21 +254,19 @@ export default function Home() {
             /> */}
             <p className='text-green-950 p-3 font-medium text-lg text-left'>A powerful URL shortner built in GoLang, shorten your long URL's in seconds, get customized URL's for free!</p>
             <div className='flex items-center justify-center align-bottom mt-12'>
-              <button className='bg-blue-500 p-4 rounded-lg text-xl text-white w-32'><Link href={"https://github.com/g-aeroastro-c/gaac-page-f"}>Github</Link></button>
+              <button className='bg-blue-500 p-3 rounded-lg text-xl text-white w-36 hover:bg-gradient-to-r hover:from-[#1F1C2C] hover:to-[#928DAB]'><Link href={"https://github.com/g-aeroastro-c/gaac-page-f"}>Github</Link></button>
             </div>
           </div>
           <div ref={pbox4} className='h-[460px] rounded-xl bg-slate-200 border-solid border-slate-300 border-2'>
             <h2 className='text-gray-600 font-bold text-2xl text-center'>Password manager</h2>
-              {/* <Image 
-              src= ''
-              width = {620}
-              height={520}
-              alt = "noble_nest_project"
-              className="object-contain"
-            /> */}
+            <div className='flex justify-center'>
+              <iframe width="560" height="285" src="https://www.youtube.com/embed/X5cqzM0_hfc?si=XdXXcMyipWCk2suR" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
+            </div>
             <p className='text-green-950 p-3 font-medium text-lg text-left'>My first project, built in python, has everything you need to keep your passwords safe😌</p>
-            <div className='flex items-center justify-center align-bottom mt-12'>
-              <button className='bg-blue-500 p-4 rounded-lg text-xl text-white w-32'><Link href={"https://youtu.be/X5cqzM0_hfc?si=HJVUja5P6QEa9F5o"}>Youtube</Link></button>
+            <div className='flex items-center justify-center align-bottom'>
+              <button className='bg-blue-500 p-3 rounded-lg text-xl text-white w-36 hover:bg-gradient-to-r hover:from-[#1F1C2C] hover:to-[#928DAB]'>
+                <Link href={"https://youtu.be/X5cqzM0_hfc?si=HJVUja5P6QEa9F5o"}>Youtube</Link>
+              </button>
             </div>
           </div>
         </div>

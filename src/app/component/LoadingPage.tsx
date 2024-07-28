@@ -7,8 +7,14 @@ gsap.registerPlugin(TextPlugin);
 
 const LoadingPage = ({ onComplete }: { onComplete: () => void }) => {
   useEffect(() => {
+    console.log('GSAP animation started');
     // Create a GSAP timeline
-    const tl = gsap.timeline();
+    const tl = gsap.timeline({
+      onComplete: () => {
+        console.log('Animation complete');
+        onComplete();
+      },
+    });
 
     // Words to display
     const words = ['Student', 'Developer', 'Teacher', 'President'];
@@ -28,8 +34,7 @@ const LoadingPage = ({ onComplete }: { onComplete: () => void }) => {
     });
 
     // Ensure final fade out and trigger onComplete
-    tl.to("#myText-0", { duration: 0.2, opacity: 0, delay: 0.2 })
-      .eventCallback("onComplete", onComplete);
+    tl.to("#myText-0", { duration: 0.2, opacity: 0, delay: 0.2 });
 
     // Cleanup on unmount
     return () => {
