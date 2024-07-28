@@ -260,7 +260,7 @@ export default function Home() {
             /> */}
             <p className='text-green-950 p-3 font-medium text-lg text-left'>My first project, built in python, has everything you need to keep your passwords safe😌</p>
             <div className='flex items-center justify-center align-bottom mt-12'>
-              <button className='bg-blue-500 p-4 rounded-lg text-xl text-white w-32'><Link href={"https://github.com/g-aeroastro-c/gaac-page-f"}>Github</Link></button>
+              <button className='bg-blue-500 p-4 rounded-lg text-xl text-white w-32'><Link href={"https://youtu.be/X5cqzM0_hfc?si=HJVUja5P6QEa9F5o"}>Youtube</Link></button>
             </div>
           </div>
         </div>
@@ -289,6 +289,113 @@ export default function Home() {
           Previously i've dug my hands into the world of Web Development, and i've familiarized myself with MERN stack, and also NEXT.JS, Tailwind CSS and Redis.<br></br>
           A language a day keeps the boredom away?.....Well im also learning GoLang, and building a very exciting project with it! 😄 
           </p>
+        </div>
+        {/* Techstacks */}
+        <div>
+          <h1 className='bg-clip-text text-transparent bg-gradient-to-b from-[#2196f3] to-[#f44336] font-bold text-3xl mb-4 p-5 ml-3'>Tech Stack</h1>
+          <div className="flex justify-between ml-5 mb-8 p-5">
+            <div className="grid grid-cols-2 gap-4 w-[300px]">
+              <h3 className='font-semibold text-xl p-4 text-blue-800 col-span-2'>Languages</h3>
+              <Image 
+                src='/C.svg'
+                width={40}
+                height={40}
+                alt='c_lang'
+              />
+              <Image 
+                src='/Python.svg'
+                width={40}
+                height={40}
+                alt='py_lang'
+              />
+              <Image 
+                src='/Go.svg'
+                width={40}
+                height={40}
+                alt='go_lang'
+              />
+              <Image 
+                src='/Java.svg'
+                width={40}
+                height={40}
+                alt='java_lang'
+              />
+              <Image 
+                src='/Js.svg'
+                width={40}
+                height={40}
+                alt='js_lang'
+              />
+              <Image 
+                src='/Ts.svg'
+                width={40}
+                height={40}
+                alt='ts_lang'
+              />
+              <Image 
+                src='/Css.svg'
+                width={40}
+                height={40}
+                alt='css_lang'
+              />
+              <Image 
+                src='/Html.svg'
+                width={40}
+                height={40}
+                alt='html_lang'
+              />
+            </div>
+
+            <div className="grid grid-cols-2 gap-4 w-[300px]">
+              <h3 className='font-semibold text-xl p-4 text-blue-800 col-span-2'>Frameworks</h3>
+              <Image 
+                src='/React.svg'
+                width={50}
+                height={50}
+                alt='react'
+              />
+              <Image 
+                src='Next.svg'
+                width={50}
+                height={50}
+                alt='next'
+              />
+              <Image 
+                src='Tailwind.svg'
+                width={50}
+                height={50}
+                alt='tailwindcss'
+              />
+              <Image 
+                src='Node.svg'
+                width={50}
+                height={50}
+                alt='node'
+              />
+            </div>
+
+            <div className="grid grid-cols-2 gap-4 w-[300px]">
+              <h3 className='font-semibold text-xl p-4 text-blue-800 col-span-2'>Database</h3>
+              <Image 
+                src='Mongo.svg'
+                width={40}
+                height={40}
+                alt='mongodb'
+              />
+              <Image 
+                src='Redis.svg'
+                width={40}
+                height={40}
+                alt='redis'
+              />
+              <Image 
+                src='Mysql.svg'
+                width={40}
+                height={40}
+                alt='mysql'
+              />
+            </div>
+          </div>
         </div>
       </div>
 
